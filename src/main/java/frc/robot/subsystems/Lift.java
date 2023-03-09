@@ -13,6 +13,10 @@ public class Lift extends SubsystemBase {
   //says what port the motor is plugged into
   private PWMTalonFX rightLift = new PWMTalonFX(4);
   private PWMTalonFX leftLift = new PWMTalonFX(5);
+
+public Lift(){
+  rightLift.setInverted(true);
+}
   
   MotorControllerGroup Lift = new MotorControllerGroup(leftLift, rightLift);
  
